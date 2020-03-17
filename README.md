@@ -201,11 +201,11 @@ Project Link: [https://github.com/manuarora700/trippers](https://github.com/manu
 [contributors-url]: https://github.com/manuarora700/trippers-project/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/manuarora700/trippers-project.svg?style=flat-square
 [forks-url]: https://github.com/manuarora700/trippers-project/network/members
-[stars-shield]: https://img.shields.io/github/contributors/manuarora700/trippers-project.svg?style=flat-square
+[stars-shield]: https://img.shields.io/github/stars/manuarora700/trippers-project.svg?style=flat-square
 [stars-url]: https://github.com/manuarora700/trippers-project/stargazers
-[issues-shield]: https://img.shields.io/github/contributors/manuarora700/trippers-project.svg?style=flat-square
+[issues-shield]: https://img.shields.io/github/issues/manuarora700/trippers-project.svg?style=flat-square
 [issues-url]: https://github.com/manuarora700/trippers-project/issues
-[license-shield]: https://img.shields.io/github/contributors/manuarora700/trippers-project.svg?style=flat-square
+[license-shield]: https://img.shields.io/github/license/manuarora700/trippers-project.svg?style=flat-square
 [license-url]: https://github.com/manuarora700/trippers-project/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/manuarora28
