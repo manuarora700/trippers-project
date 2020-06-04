@@ -24,7 +24,11 @@ const createSendToken = (user, statusCode, res) => {
   };
 
   if (process.env.NODE_ENV === 'production') cookieOptions.secure = true; // set secure only in production env
+
   res.cookie('jwt', token, cookieOptions);
+
+  // remove password from the output
+  user.password = undefined;
 
   res.status(statusCode).json({
     status: 'success',
