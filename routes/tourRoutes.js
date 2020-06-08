@@ -1,11 +1,17 @@
 const express = require('express');
 const tourController = require('./../controllers/tourController');
 const authController = require('./../controllers/authController');
-const reviewController = require('./../controllers/reviewController');
+const reviewRouter = require('./../routes/reviewRoutes');
 
 const router = express.Router();
 
 // router.param('id', tourController.checkID);
+
+// POST /tour/1231293us9dfsadf/reviews -- nested routes
+// GET /tour/1231293us9dfsadf/reviews -- nested routes
+
+router.use('/:tourId/reviews', reviewRouter); // Redirect to review router -- beautiful
+
 router
   .route('/top-5-cheap')
   .get(tourController.aliasTopTours, tourController.getAllTours);
@@ -26,18 +32,6 @@ router
     authController.protect,
     authController.restrictTo('admin', 'lead-guide'),
     tourController.deleteTour
-  );
-
-// POST /tour/1231293us9dfsadf/reviews -- nested routes
-// GET /tour/1231293us9dfsadf/reviews -- nested routes
-// GET /tour/1231293us9dfsadf/reviews/q231923u8jdiakjef -- nested routes
-
-router
-  .route('/:tourId/reviews')
-  .post(
-    authController.protect,
-    authController.restrictTo('user'),
-    reviewController.createReview
   );
 
 module.exports = router;
