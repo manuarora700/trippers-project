@@ -2,6 +2,9 @@ extends base
 
 include _reviewCard
 
+block append head
+  //- script(src='/js/mapbox.js')
+
 mixin overviewBox(label, text, icon)
   .overview-box__detail
     svg.overview-box__icon
@@ -69,7 +72,7 @@ block content
 
 
   section.section-map
-    #map
+    #map(data-locations=`${JSON.stringify(tour.locations)}`)
 
   section.section-reviews
     .reviews
@@ -80,7 +83,7 @@ block content
   section.section-cta
     .cta
       .cta__img.cta__img--logo
-        img(src='/img/logo-white.png', alt='Natours logo')
+        img(src='/img/logo-white.png', alt='Trippers logo')
       img.cta__img.cta__img--1(src=`/img/tours/${tour.images[1]}`, alt='Tour Picture')
       img.cta__img.cta__img--2(src=`/img/tours/${tour.images[2]}`, alt='Tour Picture')
       .cta__content
