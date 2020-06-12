@@ -7,7 +7,9 @@
     "start:dev": "nodemon server.js",
     "start:prod": "NODE_ENV=production nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "debug": "ndb server.js"
+    "debug": "ndb server.js",
+    "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js",
+    "build:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js"
   },
   "author": "Manu Arora",
   "license": "ISC",
@@ -39,6 +41,7 @@
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
+    "parcel-bundler": "^1.12.4",
     "prettier": "^1.17.0"
   },
   "engines": {
