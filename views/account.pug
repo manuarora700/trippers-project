@@ -29,19 +29,22 @@ block content
       .user-view__content
         .user-view__form-container
           h2.heading-secondary.ma-bt-md Your account settings
+          //- form.form.form-user-data(action='/submit-user-data', method='POST')
           form.form.form-user-data
             .form__group
               label.form__label(for='name') Name
-              input#name.form__input(type='text', value=`${user.name}`, required)
+              input#name.form__input(type='text', value=`${user.name}`, required, name='name')
             .form__group.ma-bt-md
               label.form__label(for='email') Email address
-              input#email.form__input(type='email', value=`${user.email}`, required)
+              input#email.form__input(type='email', value=`${user.email}`, required, name='email')
             .form__group.form__photo-upload
               img.form__user-photo(src=`img/users/${user.photo}`, alt='User photo')
               a.btn-text(href='') Choose new photo
             .form__group.right
               button.btn.btn--small.btn--green Save settings
+              
         .line &nbsp;
+        
         .user-view__form-container
           h2.heading-secondary.ma-bt-md Password change
           form.form.form-user-settings
