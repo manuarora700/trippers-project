@@ -44,7 +44,7 @@ if (signupForm) {
     const passwordConfirm = document.getElementById('passwordConfirm').value;
 
     e.preventDefault();
-
+    console.log('Signup index.js wala');
     signup(name, email, password, passwordConfirm);
   });
 }

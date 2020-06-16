@@ -21,7 +21,7 @@ export const signup = async (
         photo
       }
     });
-
+    console.log('FUnction signup hit');
     if (res.data.status === 'success') {
       showAlert('success', 'Signed up successfully');
       window.setTimeout(() => {

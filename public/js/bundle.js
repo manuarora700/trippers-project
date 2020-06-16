@@ -8497,6 +8497,7 @@ var logout = /*#__PURE__*/function () {
 
           case 3:
             res = _context2.sent;
+            console.log('logged out successfully');
 
             if (res.data.status === 'success') {
               (0, _alerts.showAlert)('success', 'Logged out successfully');
@@ -8505,20 +8506,20 @@ var logout = /*#__PURE__*/function () {
               }, 300);
             }
 
-            _context2.next = 10;
+            _context2.next = 11;
             break;
 
-          case 7:
-            _context2.prev = 7;
+          case 8:
+            _context2.prev = 8;
             _context2.t0 = _context2["catch"](0);
             (0, _alerts.showAlert)('error', 'Error logging out, Try again');
 
-          case 10:
+          case 11:
           case "end":
             return _context2.stop();
         }
       }
-    }, _callee2, null, [[0, 7]]);
+    }, _callee2, null, [[0, 8]]);
   }));
 
   return function logout() {
@@ -8571,6 +8572,7 @@ var signup = /*#__PURE__*/function () {
 
           case 4:
             res = _context.sent;
+            console.log('FUnction signup hit');
 
             if (res.data.status === 'success') {
               (0, _alerts.showAlert)('success', 'Signed up successfully');
@@ -8579,20 +8581,20 @@ var signup = /*#__PURE__*/function () {
               }, 500);
             }
 
-            _context.next = 11;
+            _context.next = 12;
             break;
 
-          case 8:
-            _context.prev = 8;
+          case 9:
+            _context.prev = 9;
             _context.t0 = _context["catch"](1);
             (0, _alerts.showAlert)('error', _context.t0.response.data.message);
 
-          case 11:
+          case 12:
           case "end":
             return _context.stop();
         }
       }
-    }, _callee, null, [[1, 8]]);
+    }, _callee, null, [[1, 9]]);
   }));
 
   return function signup(_x, _x2, _x3, _x4) {
@@ -9038,6 +9040,7 @@ if (signupForm) {
     var password = document.getElementById('password').value;
     var passwordConfirm = document.getElementById('passwordConfirm').value;
     e.preventDefault();
+    console.log('Signup index.js wala');
     (0, _signup.signup)(name, email, password, passwordConfirm);
   });
 }
@@ -9130,7 +9133,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61668" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50075" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
