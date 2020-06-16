@@ -27,10 +27,10 @@ mongoose
 
 //* SERVER
 const port = process.env.PORT || 3000;
-const server = app.listen(port, () => {
-  console.log(`Running on port ${port}`);
-});
-
+const server = app.listen(port, '0.0.0.0');
+// const server = app.listen(port, () => {
+//   console.log(`Running on port ${port}`);
+// });
 // Unhandled promise rejections -- handling
 process.on('unhandledRejection', err => {
   console.log(err.name, err.message);

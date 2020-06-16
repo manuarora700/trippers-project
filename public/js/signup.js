@@ -12,7 +12,7 @@ export const signup = async (
   try {
     const res = await axios({
       method: 'POST',
-      url: 'http://localhost:3000/api/v1/users/signup',
+      url: 'http://127.0.0.1:3000/api/v1/users/signup',
       data: {
         name,
         email,
