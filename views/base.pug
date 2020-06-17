@@ -3,9 +3,7 @@ html
   head
     block head
       meta(charset='UTF-8')
-      meta(name='viewport' content='width=device-width, initial-scale=1.0')
-      script(src='https://js.stripe.com/v3/')
-      
+      meta(name='viewport' content='width=device-width, initial-scale=1.0')      
       link(rel='stylesheet' href='/css/style.css')
       link(rel='shortcut icon' type='image/png' href='/img/favicon.png')
       link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,300i,700')
@@ -22,6 +20,7 @@ html
   // FOOTER
   include _footer
 
+  script(src='https://js.stripe.com/v3/')
   script(src='/js/bundle.js')
   
   //- script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js')
