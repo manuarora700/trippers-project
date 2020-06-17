@@ -25,7 +25,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/manuarora700/trippers-project">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="public/img/logo-green.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Trippers: Travel the world</h3>
@@ -136,6 +136,28 @@ DATABASE_PASSWORD={{YOUR_PASSWORD}}
 
 JWT_SECRET={{ ANY RANDOM STRING }}
 JWT_EXPIRES_IN=90d
+
+EMAIL_USERNAME={{mailtrap_username}}
+EMAIL_PASSWORD={{mailtrap_password}}
+EMAIL_HOST=smtp.mailtrap.io
+EMAIL_PORT=25
+
+EMAIL_FROM = {{your_email}}
+
+SENDGRID_USERNAME=apikey
+SENDGRID_PASSWORD={{Sendgrid_password}}
+
+STRIPE_SECRET_KEY={{sendgrid_secret_key}}
+```
+
+4. For credit card payment on the checkout page, use the following credentials:
+
+```JS
+Card Number = 4242 4242 4242 4242 (4242 repeated)
+Date: any_month/any_year
+Cvv: Any 3 digit number
+Name: Any name
+
 ```
 
 <!-- USAGE EXAMPLES -->
