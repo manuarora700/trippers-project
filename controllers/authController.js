@@ -16,13 +16,22 @@ const signToken = id => {
 const createSendToken = (user, statusCode, req, res) => {
   const token = signToken(user._id);
 
-  res.cookie('jwt', token, {
+  const cookieOptions = {
     expires: new Date(
       Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
     ),
-    httpOnly: true,
-    secure: req.secure || req.headers('x-forwarded-proto') === 'https'
-  });
+    httpOnly: true
+  };
+
+  if (
+    process.env.NODE_ENV === 'production'
+    // ! UNDO LATER IN PRODUCTION -- UNCOMMENT THIS LATER
+    // ||
+    // req.secure ||
+    // req.headers('x-forwarded-proto') === 'https'
+  )
+    cookieOptions.secure = true; // set secure only in production env
+  res.cookie('jwt', token, cookieOptions);
 
   // remove password from the output
   user.password = undefined;
