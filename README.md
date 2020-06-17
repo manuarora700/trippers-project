@@ -36,7 +36,7 @@
     <a href="https://github.com/manuarora700/trippers-project/README"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="http://trippers.manuarora.me">View Demo</a>
+    <a href="https://trippers-node.herokuapp.com/">View Demo</a>
     ·
     <a href="https://github.com/manuarora700/trippers-project/issues">Report Bug</a>
     ·
