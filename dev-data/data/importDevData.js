@@ -60,5 +60,3 @@ if (process.argv[2] === '--import') {
 } else if (process.argv[2] === '--delete') {
   deleteData();
 }
-
-console.log(process.argv);

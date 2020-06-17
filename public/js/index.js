@@ -24,7 +24,6 @@ if (mapBox) {
 }
 
 if (loginForm) {
-  console.log('Login form is here');
   loginForm.addEventListener('submit', e => {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
@@ -36,7 +35,6 @@ if (loginForm) {
 }
 
 if (signupForm) {
-  console.log('Signup form is here');
   signupForm.addEventListener('submit', e => {
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
@@ -44,7 +42,6 @@ if (signupForm) {
     const passwordConfirm = document.getElementById('passwordConfirm').value;
 
     e.preventDefault();
-    console.log('Signup index.js wala');
     signup(name, email, password, passwordConfirm);
   });
 }
