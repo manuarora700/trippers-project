@@ -1323,3 +1323,18 @@ body {
   -webkit-transform: translateY(-2px);
   transform: translateY(-2px);
 }
+::-webkit-scrollbar {
+  height: 8px; /* height of horizontal scrollbar ← You're missing this */
+  width: 4px; /* width of vertical scrollbar */
+  border: 1px solid #d5d5d5;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 0;
+  background: #eeeeee;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  background: #b0b0b0;
+}
