@@ -41,6 +41,7 @@
     <a href="https://github.com/manuarora700/trippers-project/issues">Report Bug</a>
     ·
     <a href="https://github.com/manuarora700/trippers-project/issues">Request Feature</a>
+    <a href="https://documenter.getpostman.com/view/4682946/Szzehfbv">API Documentation</a>
   </p>
 </p>
 
