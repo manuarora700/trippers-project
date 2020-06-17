@@ -209,4 +209,4 @@ Project Link: [https://github.com/manuarora700/trippers](https://github.com/manu
 [license-url]: https://github.com/manuarora700/trippers-project/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/manuarora28
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: public/img//logo-green.png
