@@ -25,7 +25,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/manuarora700/trippers-project">
-    <img src="public/img/logo-green.png" alt="Logo" width="80" height="80">
+    <img src="public/img/favicon.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Trippers: Travel the world</h3>
