@@ -14,6 +14,12 @@ router.get(
   viewsController.getOverview
 );
 
+router.get(
+  '/search/:searchTerm',
+  authController.isLoggedIn,
+  viewsController.getSearchTour
+);
+
 router.get('/tour/:slug', authController.isLoggedIn, viewsController.getTour);
 
 router.get('/login', authController.isLoggedIn, viewsController.getLoginForm);

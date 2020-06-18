@@ -6,6 +6,7 @@ import { signup } from './signup';
 import { updateSettings } from './updateSettings';
 import { bookTour } from './stripe';
 import { showAlert } from './alerts';
+import { search } from './search';
 
 // DOM elements
 const mapBox = document.getElementById('map');
@@ -15,9 +16,10 @@ const signupForm = document.querySelector('.form-signup');
 const userDataForm = document.querySelector('.form-user-data');
 const userPasswordForm = document.querySelector('.form-user-password');
 const bookBtn = document.getElementById('book-tour');
+const searchForm = document.querySelector('.search-form');
 
 // Values
-
+console.log('Search Form', searchForm);
 // Delegation
 if (mapBox) {
   const locations = JSON.parse(mapBox.dataset.locations);
@@ -87,6 +89,18 @@ if (bookBtn) {
     e.target.textContent = 'Processing...';
     const { tourId } = e.target.dataset;
     bookTour(tourId);
+  });
+}
+
+if (searchForm) {
+  console.log(searchForm);
+  searchForm.addEventListener('submit', e => {
+    const searchTerm = document.getElementById('search-term').value;
+    // const password = document.getElementById('password').value;
+
+    e.preventDefault();
+
+    search(searchTerm);
   });
 }
 

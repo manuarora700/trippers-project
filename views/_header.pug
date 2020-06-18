@@ -4,6 +4,9 @@ header.header
   .header__logo
     img(src='/img/logo-white.png' alt='Trippers logo')
   nav.nav.nav--user
+    form.form.search-form
+      input#search-term(type='text' placeholder='search tours...')
+      button(type='submit') search
     if user
       a.nav__el.nav__el--logout Log out
       a.nav__el(href='/me')
