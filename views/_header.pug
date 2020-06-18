@@ -1,12 +1,16 @@
 header.header
   nav.nav.nav--tours
     a.nav__el(href='/') All tours
-  .header__logo
-    img(src='/img/logo-white.png' alt='Trippers logo')
-  nav.nav.nav--user
+    
     form.form.search-form
-      input#search-term(type='text' placeholder='search tours...')
-      button(type='submit') search
+      input#search-term.search-input(type='text' placeholder='search tours...')
+      button.nav__el.search-btn(type='submit') search
+  .header__logo
+    a(href="/")
+      img(src='/img/logo-white.png' alt='Trippers logo')
+  
+  nav.nav.nav--user
+    
     if user
       a.nav__el.nav__el--logout Log out
       a.nav__el(href='/me')

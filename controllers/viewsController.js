@@ -96,26 +96,6 @@ exports.updateUserData = catchAsync(async (req, res, next) => {
 });
 
 exports.getSearchTour = catchAsync(async (req, res, next) => {
-  // 1. Get the data, for the requested tour (includes reviews and tour guides)
-  // const { searchTerm } = req.params;
-  // const tour = await Tour.find({
-  //   name: { $regex: `${searchTerm}`, $options: 'i' }
-  // }).populate({
-  //   path: 'reviews',
-  //   fields: 'review rating user'
-  // });
-  // console.log(tour);
-  // if (!tour) {
-  //   return next(new AppError('There is no tour with that name', 404));
-  // }
-  // // 2. Build templates
-
-  // // 3. Render template using data from step 1.
-  // res.status(200).render('overview', {
-  //   title: `${tour.name} Tour`,
-  //   tour
-  // });
-
   const { searchTerm } = req.params;
   const searchTours = await Tour.find({
     $or: [
@@ -129,9 +109,7 @@ exports.getSearchTour = catchAsync(async (req, res, next) => {
   if (!searchTours) {
     return next(new AppError('There is no tour with that name', 404));
   }
-  // if (searchTours === {}) {
-  //   return next(new AppError('There were no matching results', 404));
-  // }
+
   // 3. Render the template using the tour data from the collection
   res.status(200).render('overview', {
     title: 'Search Result',

@@ -8747,55 +8747,26 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 var search = /*#__PURE__*/function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(searchTerm) {
-    var res;
     return regeneratorRuntime.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            _context.prev = 0;
-
-            if (!(searchTerm.trim() === '')) {
-              _context.next = 3;
+            if (searchTerm.trim()) {
+              _context.next = 2;
               break;
             }
 
             return _context.abrupt("return");
 
+          case 2:
+            window.location.href = "/search/".concat(searchTerm);
+
           case 3:
-            _context.next = 5;
-            return (0, _axios.default)({
-              method: 'GET',
-              url: "/search/".concat(searchTerm),
-              data: {
-                searchTerm: searchTerm
-              }
-            });
-
-          case 5:
-            res = _context.sent;
-
-            if (res.data.status === 'success') {
-              (0, _alerts.showAlert)('success', 'Search was performed');
-              window.setTimeout(function () {
-                location.assign('/');
-              }, 500);
-            }
-
-            console.log('search function working', searchTerm);
-            _context.next = 13;
-            break;
-
-          case 10:
-            _context.prev = 10;
-            _context.t0 = _context["catch"](0);
-            (0, _alerts.showAlert)('error', _context.t0.response.data.message);
-
-          case 13:
           case "end":
             return _context.stop();
         }
       }
-    }, _callee, null, [[0, 10]]);
+    }, _callee);
   }));
 
   return function search(_x) {

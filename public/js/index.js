@@ -99,7 +99,6 @@ if (searchForm) {
     // const password = document.getElementById('password').value;
 
     e.preventDefault();
-
     search(searchTerm);
   });
 }
