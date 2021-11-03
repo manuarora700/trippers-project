@@ -37,7 +37,7 @@
     "sharp": "^0.25.4",
     "slugify": "^1.4.0",
     "stripe": "^8.63.0",
-    "validator": "^12.2.0",
+    "validator": "^13.7.0",
     "xss-clean": "^0.1.1"
   },
   "devDependencies": {
